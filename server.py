@@ -27,48 +27,9 @@ def allowed_file(filename):
 #inital route / login
 @app.route('/')
 def login():
-    return render_template('login.html')
-
-#sign up route
-@app.route('/signup', methods=['POST'])
-def signup():
-    return render_template('signup.html')
-
-#home route for the user
-@app.route('/home', methods=['POST'])
-def home():
-    email = request.form['email']
-    first_name = request.form['fname']
-    last_name = request.form['lname']
-    create_password = request.form['createPass']
-    confirm_password = request.form['confirmPass']
-    
-    if email == '' or first_name == '' or last_name == '' or create_password == '':
-        return render_template('signup.html', message = 'Please make sure you enter all required fields!!!')
-    elif create_password != confirm_password:
-        return render_template('signup.html', passmessage = 'Passwords do not match')
-    elif email in prevUser():
-        return render_template('login.html', message = 'The email exists please log in')
-    insert(email, first_name, last_name, create_password, 'client')
-    return render_template(f'{getRole(email)[0]}/home.html')
-
-@app.route('/signed', methods=['POST'])
-def signed():
-    email = request.form['email']
-    password = request.form['password']
-    print(email)
-    if email in prevUser():
-        if password in getPassword(email):
-            return render_template(f'{getRole(email)[0]}/home.html')
-        else:
-            return render_template('login.html', message='The password you entered in incorrect, please try again')
-    else:
-        return render_template('signup.html', message='The email you entered does not exist, please create an account')
-
-#quote route where the user will upload the image
-@app.route('/quote')
-def quote():
     return render_template('client/quote.html')
+
+
 
 #this is the route for uploading / this will take effect after the user uploads the image
 @app.route('/upload', methods=['POST'])
