@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/home" method="post">
+            <p>{{message}}</p>
+            <div class="form-group">
+                <label for="fname">First Name:</label>
+                <input type="text" placeholder="First Name..." class="form-control" name="fname">
+            </div>
+
+            <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" placeholder="Last Name..." class="form-control" name="lname">
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Add Email..." class="form-control" name="email">
+            </div>
+    
+            <div class="form-group">
+                <label for="create password">Create Password:</label>
+                <input type="password" placeholder="Create Password..." class="form-control" name="createPass">
+            </div>
+            <div class="form-group">
+                <p>{{passmessage}}</p>
+                <label for="confirm password">Confirm Password:</label>
+                <input type="password" placeholder="confirm Password..." class="form-control" name="confirmPass">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+
+        <form action="/" method="get">
+            <p>I do have an account</p>
+            <button class="btn btn-primary">Sign Up</button>
+        </form>
+      </div>
+    
+</body>
+</html>

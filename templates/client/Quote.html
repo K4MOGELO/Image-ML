@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="C:\Users\Tshepo\Desktop\syruproject\static\css\style.css">
+    <script src="https://kit.fontawesome.com/3e2a1eade5.js", crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar">
+        <div class="navbar-center">
+            <span class="nav-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+            <h1>Syru<span class="Pro">Projects</span></h1>
+            <div class="user-btn">
+                <span class="nav-icon"></span>
+                    <i class="fas fa-user"></i>
+                </span>
+            </div>
+        </div>        
+    </nav>
+    <!--end of navbar-->
+    <h2>Upload an Image</h2>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" id="image" name="image" accept="image/*">
+        <br><br>
+        <input type="submit" value="Upload Image">
+    </form>
+    <div class="error">
+        <h3 class="error-text">{{message}}</h3>
+    </div>
+    <section class="display-price">
+        <div class="img">
+            <img src="/image" alt="">
+        </div>
+        <div class="display-amount">{{price}}</div>
+        <form action="/sendQuote">
+            <button>{{btn}}</button>
+        </form>
+        <form action="/upload/customization" method="post">
+            <button>customize</button>
+        </form>
+    </section>
+   
+
+
+
+</body>
+</html>

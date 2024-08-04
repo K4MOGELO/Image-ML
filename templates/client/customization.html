@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://kit.fontawesome.com/3e2a1eade5.js", crossorigin="anonymous"></script>
+</head>
+<body>
+    <p>please make sure to check the of services that we offer</p>
+    <form action="/upload/customization/service">
+        <button class="service-btn">Services</button>
+    </form>
+    
+    <form action="/upload/customization/change">
+        <input type="checkbox" value="pothole"> pothole repair <br>
+        <input type="checkbox" value="painting"> painting <br>
+        <input type="checkbox" value="crack"> crack repair <br>
+        <input type="checkbox" value="signs"> road signs repair <br>
+        <input type="checkbox" value="lights"> road lights <br>
+        <input type="checkbox" value="side_walk"> side walk 
+    </form>
+</body>
+</html>

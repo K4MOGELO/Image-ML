@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://kit.fontawesome.com/3e2a1eade5.js", crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar">
+        <div class="navbar-center">
+            <span class="nav-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+            <h1>Syru<span class="Pro">Projects</span></h1>
+            <div class="user-btn">
+                <span class="nav-icon"></span>
+                    <i class="fas fa-user"></i>
+                </span>
+            </div>
+        </div>        
+    </nav>
+    <!--end of navbar-->
+    <!--hero-->
+    <header class="hero">
+        <div class="banner">
+            <h1 class="banner-title">Get Quotation Now</h1>
+            <form metod="post" action="/quote">
+                <button class="banner-btn">get Quote</button>
+            </form>
+        </div>
+    </header>
+    
+    <!--end of hero-->
+    
+
+    <!--display-->
+    <div>
+        <div class="blocks">
+            <div class="first-blocks">
+                <a href="./about-us.html">
+                    <div class="about-us">
+                        <h3>About Us</h3>
+                        <span><i class="material-icons">info</i></span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="our-work">
+                        <h3>Our work</h3>
+                        <span><i class="material-icons">library_books</i></span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="second-blocks">
+                <div class="get-quote">
+                    <form action="/services" method="get">
+                        <button class="get-quote">services</button>
+                    </form>
+                </div>
+        
+                <a href="#">
+                    <div class="planning">
+                        <h3>Planning</h3>
+                        <span><i class="material-icons">insights</i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--end of display-->
+
+</body>
+</html>

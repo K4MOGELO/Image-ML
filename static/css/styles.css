@@ -1,0 +1,254 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryColor: #0275d3;
+    --mainWhite: #ffffff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --testcolor: #282828;
+    --mainTransition: all 0.3s linear;
+}
+
+body{
+    color: var(--mainBlack);
+    background: var(--mainWhite);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*option*/
+.container{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.container .container-content{
+    height: 50%;
+    width: 100%;
+    background-color: black;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.container-content h1{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* First Blocks */
+.blocks .first-blocks{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.blocks .first-blocks .about-us{
+    height: 100px;
+    width: 150px;
+    background-color: purple;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.first-blocks .about-us h3{
+    padding-top: 10px;
+}
+
+.first-blocks .about-us i{
+    font-size: 3rem;
+}
+
+.first-blocks a{
+    text-decoration: none;
+    color: white;
+}
+
+.blocks .first-blocks .our-work{
+    height: 100px;
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.blocks .first-blocks .our-work{
+    background-color: orange;
+    color: white;
+    text-align: center;
+}
+
+.first-blocks .our-work h3{
+    padding-top: 10px;
+}
+
+.first-blocks .our-work i{
+    font-size: 3rem;
+}
+
+
+
+/* Second Blocks */
+.blocks .second-blocks{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.blocks .second-blocks .get-quote{
+    height: 100px;
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.blocks .second-blocks .get-quote{
+    border: none;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.second-blocks .get-quote h3{
+    padding-top: 10px;
+}
+
+.second-blocks .get-quote i{
+    font-size: 3rem;
+}
+
+
+.second-blocks a{
+    text-decoration: none;
+    color: white;
+}
+
+.blocks .second-blocks .planning{
+    height: 100px;
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.blocks .second-blocks .planning{
+    background-color: aqua;
+    color: white;
+    text-align: center;
+}
+
+.blocks .second-blocks .planning h3{
+    padding-top: 5px;
+}
+
+.blocks .second-blocks .planning i{
+    font-size: 3rem;
+    border: 2.5px solid white;
+    padding: 5px;
+}
+
+.service-btn{
+    border: none;
+}
+
+/*end of options*/
+
+/* Quote */
+.error-text{
+    color: #ff2106;
+}
+
+/* end of quote */
+
+/* New style */
+
+/*--------------------------Navbar-------------------------------------*/
+.navbar{
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: rgb(231, 226, 221);
+    z-index: 1;
+}
+
+.navbar-center{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.nav-icon{
+    font-size: 1.5rem;
+}
+
+.user-btn{
+    position: relative;
+    cursor: pointer;
+}
+
+
+.Pro{
+    color: var(--primaryColor);
+}
+/*------------------------End of Navbar------------------*/
+
+/*-------------------------hero-------------------------*/
+.hero{
+    min-height: calc(100vh - 60px);
+    background: url("../images/road-maintenance.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    justify-content: center;
+}
+
+.banner{
+    text-align: center;
+    background-color: rgba(225, 225, 225, 0.8);
+    display: inline-block;
+    padding: 2rem;
+}
+
+.banner-title{
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 3rem;
+}
+
+.banner-btn{
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1rem;
+    background: var(--primaryColor);
+    color: var(--mainBlack);
+    border: 1px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    cursor: pointer;
+}
+
+.banner-btn:hover{
+    background: transparent;
+    color: var(--primaryColor);
+}
+/*---------------------End of hero---------------*/
+
+/* End of new style */
