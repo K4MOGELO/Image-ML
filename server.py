@@ -2,10 +2,6 @@ from flask import Flask, render_template, request, redirect, url_for
 import os
 from io import BytesIO
 from backend.imageProcessing.validation import is_tar_road
-from backend.database.setData import insert
-from backend.database.getData import prevUser
-from backend.database.getData import getPassword
-from backend.database.getData import getRole
 from backend.calculations.regModel.pothole_model import get_pothole_model
 from backend.calculations.pothole_areas import get_pothole_area
 
