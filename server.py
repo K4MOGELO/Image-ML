@@ -44,7 +44,7 @@ def upload_file():
                 pothole_price = pothole_price + price 
             print("there is a road")
             print(f'the price is {pothole_price}')
-            return jsonify({"message": f"The cost of this is R{pothole_price}"})
+            return jsonify({"message": f"The cost of this is R{pothole_price}", "img": filename})
         else: #this happens when the image does not contain a tar road
             print("There is no road")
             message = """The image does not contain a road, please enter an image with a road
