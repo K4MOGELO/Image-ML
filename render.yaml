@@ -5,5 +5,5 @@ services:
     buildCommand: |
       pip install -r requirements.txt
     startCommand: |
-      python run.py
+      python server.py
     port: 5000
