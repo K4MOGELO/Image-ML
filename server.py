@@ -97,5 +97,5 @@ def upload_file():
 # def get_customization():
 #     return render_template('client/customization.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
