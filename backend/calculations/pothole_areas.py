@@ -33,7 +33,6 @@ def get_pothole_area(img_path):
         
     print(pixel_area)
     
-    cv2.imshow("pothole",img)
     cv2.imwrite("result1"+".jpg",img) #result name
     cv2.waitKey(0)
     cv2.destroyAllWindows()

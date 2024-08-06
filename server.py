@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for,jsonify
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
-from waitress import serve
 import os
 from io import BytesIO
 from backend.imageProcessing.validation import is_tar_road
@@ -99,5 +98,4 @@ def upload_file():
 #     return render_template('client/customization.html')
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Use PORT environment variable or default to 5000
-    serve(app, host='0.0.0.0', port=port)
+    app.run(debug=True)
