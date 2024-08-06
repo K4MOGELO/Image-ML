@@ -34,8 +34,7 @@ def get_pothole_area(img_path):
     print(pixel_area)
     
     cv2.imwrite("result1"+".jpg",img) #result name
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    
     #-----------------------------End of Pothole Detector------------------------------------ 
     
     #------------------------------Getting Pixel Per Meter-----------------------------------
